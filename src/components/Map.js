@@ -40,7 +40,8 @@ class Map extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            active: options[0]
+            active: options[0],
+            formData: this.props.formData
         };
     }
     componentDidUpdate() {
