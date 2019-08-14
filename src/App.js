@@ -7,11 +7,12 @@ import Form from './components/Form.js';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Map/>
+        <div className={"formContainer"}>
         <Form/>
-      </header>
+        </div>
+        <div className={"mapContainer"}>
+        <Map/>
+        </div>
     </div>
   );
 }
