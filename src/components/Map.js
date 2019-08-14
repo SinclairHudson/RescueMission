@@ -50,9 +50,9 @@ class Map extends React.Component {
     componentDidMount() {
         this.map = new mapboxgl.Map({
             container: this.mapContainer,
-            style: 'mapbox://styles/mapbox/streets-v9',
-            center: [5, 34],
-            zoom: 1.5
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-78.52,45.79],
+            zoom: 5
         });
 
         this.map.on('load', () => {
@@ -99,7 +99,7 @@ class Map extends React.Component {
             );
         };
         return (
-            <div>
+            <div style={{padding: 0, width: 300}}>
                 <div ref={el => this.mapContainer = el}/>
                 <div>
                     {options.map(renderOptions)}
