@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import MapManagment from './components/MapManagement.js';
+import { Marker } from "react-mapbox-gl";
 //import Map from './components/Map.js';
 import Form from './components/Form.js';
 import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
@@ -64,6 +65,13 @@ function App() {
                     width: '80vw'
                 }}
             >
+
+                <Marker
+              coordinates={[-78.52, 45.79 ]}
+             anchor="bottom"
+             >
+             <img src={'http://com.cartodb.users-assets.production.s3.amazonaws.com/simpleicon/map43.svg'}/>
+                </Marker>
                 <Layer type="heatmap" paint={layerPaint}>
                     {data.map((el, index) => (
                         <Feature key={index} coordinates={el.latlng} properties={el} />
