@@ -26,8 +26,11 @@ class Form extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Last Seen:<br />
-            <input type="text" value={this.state.latitude} onChange={this.handleChange} name="latitude" placeholder="Latitude"/>
-            <input type="text" value={this.state.longitude} onChange={this.handleChange} name="longitude" placeholder="Longitude"/>
+            Latitude: <input type="text" value={this.state.lslatitude} onChange={this.handleChange} name="latitude" placeholder="49.010234"/><br />
+            Longitude: <input type="text" value={this.state.lslongitude} onChange={this.handleChange} name="longitude" placeholder="-79.345231"/><br />
+            <br />
+            Time: <input type="time" value={this.state.lstime} onChange={this.handleChange} name="longitude"/><br />
+          
           </label>
           <input type="submit" value="Submit" />
         </form>
