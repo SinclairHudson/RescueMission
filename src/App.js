@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MapManagment from './components/MapManagement.js';
 //import Map from './components/Map.js';
 import Form from './components/Form.js';
 import ReactMapboxGl, { Layer, Feature } from 'react-mapbox-gl';
@@ -51,6 +51,7 @@ const Map = ReactMapboxGl({
 function App() {
   return (
     <div className="App">
+      <MapManagment />
         <div className={"formContainer"}>
         <Form/>
         </div>

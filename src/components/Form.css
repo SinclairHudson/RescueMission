@@ -1,0 +1,12 @@
+form {
+    text-align: left;
+}
+.formGroup {
+    padding: 10px;
+}
+
+.innerFormGroup{
+    margin-top: 5px;
+    border: 1px solid black;
+    padding: 5px;
+}
