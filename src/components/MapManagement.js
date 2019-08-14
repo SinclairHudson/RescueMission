@@ -1,5 +1,4 @@
 import React from 'react'
-import Map from './Map.js';
 import Form from './Form.js';
 
 class MapManagment extends React.Component {
@@ -18,7 +17,6 @@ class MapManagment extends React.Component {
             <Form callback={this.callback.bind(this)}/>
             </div>
             <div className={"mapContainer"}>
-            <Map formData={this.state}/>
             </div>
         </div>
         );

@@ -18,7 +18,7 @@ const mapStyle = {
 
 const layerPaint = {
     'heatmap-weight': {
-        property: 'priceIndicator',
+        property: 'timestamp',
         type: 'exponential',
         stops: [[0, 1], [5, 5]]
     },
@@ -41,7 +41,7 @@ const layerPaint = {
     ],
     // Adjust the heatmap radius by zoom level
     'heatmap-radius': {
-        stops: [[0, 1], [0, 400]]
+        stops: [[1, 34], [200, 200]]
     }
 };
 const Map = ReactMapboxGl({
@@ -52,7 +52,6 @@ const Map = ReactMapboxGl({
 function App() {
   return (
     <div className="App">
-      <MapManagment />
         <div className={"formContainer"}>
         <Form/>
         </div>
@@ -61,7 +60,7 @@ function App() {
                 center={[ -78.52, 45.79 ]}
                 style="mapbox://styles/mapbox/streets-v9"
                 containerStyle={{
-                    height: '100vh',
+                    height: '98vh',
                     width: '80vw'
                 }}
             >
@@ -70,7 +69,7 @@ function App() {
               coordinates={[-78.52, 45.79 ]}
              anchor="bottom"
              >
-             <img src={'http://com.cartodb.users-assets.production.s3.amazonaws.com/simpleicon/map43.svg'}/>
+             <img src={'http://com.cartodb.users-assets.production.s3.amazonaws.com/simpleicon/map43.svg'} width={50}/>
                 </Marker>
                 <Layer type="heatmap" paint={layerPaint}>
                     {data.map((el, index) => (
